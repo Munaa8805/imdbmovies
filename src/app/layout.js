@@ -1,17 +1,22 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Create Next App",
-    description: "This is IDMS movies app",
+    title: "IMDB Movies App",
+    description:
+        "This is IMDB movies app, free movies watch, new movies, action movies, top movies.",
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <Header />
+                {children}
+            </body>
+        </html>
+    );
 }
